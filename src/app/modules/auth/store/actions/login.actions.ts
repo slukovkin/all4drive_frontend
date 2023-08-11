@@ -15,5 +15,5 @@ export const loginSuccessAction = createAction(
 
 export const loginFailureAction = createAction(
   ActionTypes.LOGIN_FAILURE,
-  props<{ response: HttpErrorResponse }>()
+  props<{ message: HttpErrorResponse }>()
 )

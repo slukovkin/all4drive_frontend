@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import {
   RegistrationComponent
-} from "../auth/registration/registration.component";
+} from "../auth/components/registration/registration.component";
 
 const routes: Routes = [
   {

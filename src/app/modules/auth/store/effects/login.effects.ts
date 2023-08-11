@@ -26,7 +26,7 @@ export class LoginEffect {
             return loginSuccessAction({user})
           }),
           catchError((errorResponse: HttpErrorResponse) => {
-            return of(loginFailureAction({response: errorResponse.message}))
+            return of(loginFailureAction({message: errorResponse.error}))
           })
         )
       })
