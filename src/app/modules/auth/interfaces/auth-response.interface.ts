@@ -1,5 +1,5 @@
-import {UserInterface} from "./user.interface";
+import { UserInterface } from "./user.interface";
 
 export interface AuthResponseInterface {
-  user: UserInterface
+  user: UserInterface;
 }
