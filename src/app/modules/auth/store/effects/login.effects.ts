@@ -7,15 +7,17 @@ import {
   loginFailureAction,
   loginSuccessAction,
 } from "../actions/login.actions";
-import { catchError, map, of, switchMap } from "rxjs";
+import { catchError, map, of, switchMap, tap } from "rxjs";
 import { UserInterface } from "../../interfaces/user.interface";
 import { HttpErrorResponse } from "@angular/common/http";
+import { Router } from "@angular/router";
 
 @Injectable()
 export class LoginEffect {
   constructor(
     private actions$: Actions,
     private authService: AuthService,
+    private router: Router,
   ) {}
 
   login$ = createEffect(() =>
@@ -32,5 +34,15 @@ export class LoginEffect {
         );
       }),
     ),
+  );
+  redirectAfterSubmit$ = createEffect(
+    () =>
+      this.actions$.pipe(
+        ofType(loginSuccessAction),
+        tap(() => {
+          this.router.navigateByUrl("/registration");
+        }),
+      ),
+    { dispatch: false },
   );
 }
