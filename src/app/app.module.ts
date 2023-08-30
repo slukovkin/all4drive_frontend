@@ -12,10 +12,12 @@ import { RouterOutlet } from "@angular/router";
 import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
   imports: [
+    HttpClientModule,
     BrowserModule,
     NgbModule,
     BrowserAnimationsModule,
