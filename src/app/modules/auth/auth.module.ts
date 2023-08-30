@@ -9,11 +9,16 @@ import { StoreModule } from "@ngrx/store";
 import { authReducer } from "./store/reducers";
 import { EffectsModule } from "@ngrx/effects";
 import { RegisterEffect } from "./store/effects/register.effect";
+import { LoginEffect } from "./store/effects/login.effects";
 
 const routes: Routes = [
   {
     path: "login",
     component: LoginComponent,
+  },
+  {
+    path: "registration",
+    component: RegistrationComponent,
   },
   {
     path: "**",
@@ -30,7 +35,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     RouterModule.forChild(routes),
     StoreModule.forFeature("auth", authReducer),
-    EffectsModule.forFeature([RegisterEffect]),
+    EffectsModule.forFeature([RegisterEffect, LoginEffect]),
   ],
   providers: [AuthService],
   exports: [LoginComponent, RegistrationComponent],
