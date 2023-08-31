@@ -13,12 +13,19 @@ import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { HttpClientModule } from "@angular/common/http";
-import { ReportsComponent } from './pages/reports/reports.component';
-import { DocumentsComponent } from './pages/documents/documents.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { ReportsComponent } from "./pages/reports/reports.component";
+import { DocumentsComponent } from "./pages/documents/documents.component";
+import { DashboardComponent } from "./pages/dashboard/dashboard.component";
+import { ProductModule } from "./modules/product/product.module";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ReportsComponent, DocumentsComponent, DashboardComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    ReportsComponent,
+    DocumentsComponent,
+    DashboardComponent,
+  ],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -26,6 +33,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     BrowserAnimationsModule,
     MaterialUiModule,
     AuthModule,
+    ProductModule,
     RoutesModule,
     RouterOutlet,
     StoreModule.forRoot({}, {}),
