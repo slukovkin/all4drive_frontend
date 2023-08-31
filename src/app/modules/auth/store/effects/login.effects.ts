@@ -40,7 +40,7 @@ export class LoginEffect {
       this.actions$.pipe(
         ofType(loginSuccessAction),
         tap(() => {
-          this.router.navigateByUrl("/registration");
+          this.router.navigateByUrl("/dashboard");
         }),
       ),
     { dispatch: false },
