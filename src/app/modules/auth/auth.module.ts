@@ -10,11 +10,21 @@ import { authReducer } from "./store/reducers";
 import { EffectsModule } from "@ngrx/effects";
 import { RegisterEffect } from "./store/effects/register.effect";
 import { LoginEffect } from "./store/effects/login.effects";
+import { DocumentsComponent } from "src/app/pages/documents/documents.component";
+import { DashboardComponent } from "src/app/pages/dashboard/dashboard.component";
 
 const routes: Routes = [
   {
     path: "login",
     component: LoginComponent,
+  },
+  {
+    path: "documents",
+    component: DocumentsComponent,
+  },
+  {
+    path: "dashboard",
+    component: DashboardComponent,
   },
   {
     path: "registration",

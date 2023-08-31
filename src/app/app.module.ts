@@ -13,9 +13,12 @@ import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { HttpClientModule } from "@angular/common/http";
+import { ReportsComponent } from './pages/reports/reports.component';
+import { DocumentsComponent } from './pages/documents/documents.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, ReportsComponent, DocumentsComponent, DashboardComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
