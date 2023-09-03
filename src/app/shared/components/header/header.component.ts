@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { MatDrawer } from "@angular/material/sidenav";
 
 @Component({
   selector: "app-header",
@@ -7,4 +8,11 @@ import { Component } from "@angular/core";
 })
 export class HeaderComponent {
   title = "All4Drive";
+
+  @Input()
+  drawer!: MatDrawer;
+
+  setSideNav(drawer: MatDrawer) {
+    this.drawer = drawer;
+  }
 }
