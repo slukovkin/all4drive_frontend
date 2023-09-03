@@ -17,10 +17,12 @@ import { ReportsComponent } from "./pages/reports/reports.component";
 import { DocumentsComponent } from "./pages/documents/documents.component";
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 import { ProductModule } from "./modules/product/product.module";
+import { SidenavComponent } from "./shared/components/sidenav/sidenav.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    SidenavComponent,
     HeaderComponent,
     ReportsComponent,
     DocumentsComponent,
