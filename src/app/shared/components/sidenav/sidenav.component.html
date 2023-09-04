@@ -1,12 +1,32 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
-    </button>
+    <div class="row">
+      <button mat-raised-button type="button" (click)="switchPage('spr')">
+        Справочники
+
+        <!-- При нажатии на кнопку станица должна отображаться в ng-template -->
+      </button>
+      <button mat-raised-button type="button" (click)="switchPage('doc')">
+        Документы
+
+        <!-- При нажатии на кнопку станица должна отображаться в ng-template -->
+      </button>
+      <button mat-raised-button type="button" (click)="switchPage('rep')">
+        Отчеты
+
+        <!-- При нажатии на кнопку станица должна отображаться в ng-template -->
+      </button>
+    </div>
   </mat-drawer>
-  <div class="example-sidenav-content">
-    <app-product-list></app-product-list>
+  <div class="example-sidenav-content" [ngSwitch]="showPage">
+    <ng-template ngSwitchCase="doc">
+      <h3>Документы</h3>
+    </ng-template>
+    <ng-template ngSwitchCase="spr">
+      <h3>Справочник</h3>
+    </ng-template>
+    <ng-template ngSwitchCase="rep">
+      <h3>Отчеты</h3>
+    </ng-template>
   </div>
 </mat-drawer-container>

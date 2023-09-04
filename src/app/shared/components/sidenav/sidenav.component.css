@@ -1,16 +1,16 @@
 .example-container {
-  height: 100vh;
+  height: calc(100% - var(--mat-toolbar-standard-height));
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .example-sidenav-content {
   display: flex;
-  height: 100vh;
+  height: calc(100% - var(--mat-toolbar-standard-height));
   margin: 20px;
   /* align-items: center;
   justify-content: center; */
 }
 
-.example-sidenav {
+/* .example-sidenav {
   padding: 20px;
-}
+} */

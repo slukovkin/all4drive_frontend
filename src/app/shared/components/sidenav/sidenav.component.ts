@@ -13,17 +13,20 @@ import { MatDrawer } from "@angular/material/sidenav";
   styleUrls: ["./sidenav.component.css"],
 })
 export class SidenavComponent implements OnInit {
-  showFiller = false;
-
   @Output()
   sideMenuControl: EventEmitter<MatDrawer> = new EventEmitter<MatDrawer>();
 
   @ViewChild("drawer", { static: true })
   sideMenu!: MatDrawer;
+  showPage!: string
 
   constructor() {}
 
   ngOnInit() {
     this.sideMenuControl.emit(this.sideMenu);
+  }
+
+  switchPage(name: string) {
+    this.showPage = name
   }
 }
