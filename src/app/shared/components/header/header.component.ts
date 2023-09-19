@@ -8,6 +8,7 @@ import { MatDrawer } from "@angular/material/sidenav";
 })
 export class HeaderComponent {
   title = "All4Drive";
+  isActiveDirectories = false;
 
   @Input()
   drawer!: MatDrawer;

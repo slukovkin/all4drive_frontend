@@ -18,6 +18,9 @@ import { DocumentsComponent } from "./pages/documents/documents.component";
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 import { ProductModule } from "./modules/product/product.module";
 import { SidenavComponent } from "./shared/components/sidenav/sidenav.component";
+import { DirectoriesComponent } from "./pages/directories/directories.component";
+import { BoldDirective } from "./directives/bold.directive";
+import { HeaderDirectoriesComponent } from "./pages/directories/components/header-directories/header-directories.component";
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { SidenavComponent } from "./shared/components/sidenav/sidenav.component"
     ReportsComponent,
     DocumentsComponent,
     DashboardComponent,
+    DirectoriesComponent,
+    BoldDirective,
+    HeaderDirectoriesComponent,
   ],
   imports: [
     HttpClientModule,

@@ -23,10 +23,14 @@ export class SidenavComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.sideMenuControl.emit(this.sideMenu);
+    this.inintializeSideMenu();
   }
-
+  
   switchPage(name: string) {
     this.showPage = name
+  }
+  
+  inintializeSideMenu() {
+    this.sideMenuControl.emit(this.sideMenu);
   }
 }

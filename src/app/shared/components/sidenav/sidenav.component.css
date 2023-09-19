@@ -7,10 +7,10 @@
   display: flex;
   height: calc(100% - var(--mat-toolbar-standard-height));
   margin: 20px;
-  /* align-items: center;
-  justify-content: center; */
 }
 
-/* .example-sidenav {
-  padding: 20px;
-} */
+.example-sidenav {
+  background-color: inherit;
+  /* padding: 20px; */
+  overflow-x: hidden;
+}
